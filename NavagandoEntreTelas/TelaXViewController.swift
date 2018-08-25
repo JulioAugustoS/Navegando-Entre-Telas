@@ -38,8 +38,11 @@ class TelaXViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     
-        let t = segue.destination as! TelaVermelhaViewController
-        t.textoDoLabel = "Passando os dados da tela X para a tela vermelha"
+        if segue.identifier == "TelaXparaTelaVermelhaSegue" {
+            let t = segue.destination as! TelaVermelhaViewController
+            t.textoDoLabel = "Passando os dados da tela X para a tela vermelha"
+        }
+        
     }
 
 }
